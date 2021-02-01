@@ -53,7 +53,7 @@ namespace dotnet_rpg.Controllers
       return Ok(await _characterService.UpdateCharacter(characterToModify));
     }
 
-
+    // [Route("{id}")]
     [HttpDelete("{id}")]
     public async Task<IActionResult> Del(int id)
     {
