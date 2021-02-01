@@ -4,11 +4,12 @@ using dotnet_rpg.Models;
 
 namespace dotnet_rpg
 {
-    public class AutoMapperProfile : Profile
+  public class AutoMapperProfile : Profile
+  {
+    public AutoMapperProfile()
     {
-        public AutoMapperProfile()
-        {
-            CreateMap<Character, GetCharacterDto>();
-        }
+      CreateMap<Character, GetCharacterDto>();
+      CreateMap<AddCharacterDto, Character>();
     }
+  }
 }
