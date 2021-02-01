@@ -3,6 +3,8 @@ using dotnet_rpg.Models;
 using System.Collections.Generic;
 using System.Linq;
 using dotnet_rpg.Services;
+using System.Threading.Tasks;
+using dotnet_rpg.Dtos.Character;
 
 namespace dotnet_rpg.Controllers
 {
@@ -16,32 +18,32 @@ namespace dotnet_rpg.Controllers
             knight,
             new Character(){Id = 1, Name="Same"}
         };
-        private readonly ICharacterService characterService;
+        private readonly ICharacterService _characterService;
 
         public CharacterController(ICharacterService characterService)
         {
-            this.characterService = characterService;
+            this._characterService = characterService;
         }
 
         [Route("getall")]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
 
-            return Ok(characterService.GetAllCharacters());
+            return Ok(await _characterService.GetAllCharacters());
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetSingle(int id)
+        public async Task<IActionResult> GetSingle(int id)
         {
 
-            return Ok(characterService.GetOneCharacter(id));
+            return Ok(await _characterService.GetOneCharacter(id));
         }
 
         [HttpPost]
-        public IActionResult PostCharacter(Character newCharacter)
+        public async Task<IActionResult> PostCharacter(AddCharacterDto newCharacter)
         {
 
-            return Ok(characterService.AddCharacter(newCharacter));
+            return Ok(await _characterService.AddCharacter(newCharacter));
         }
     }
 }
