@@ -10,10 +10,10 @@ namespace dotnet_rpg.Models
         public string Username { get; set; }
         public int Id { get; set; }
 
-        public byte[] PasswordHashB { get; set; }
+        public byte[] PasswordHash { get; set; }
 
         public byte[] Salt { get; set; }
 
-        public List<Character> MyProperty { get; set; } 
+        public List<Character> MyProperty { get; set; }
     }
 }
