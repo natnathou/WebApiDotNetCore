@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dotnet_rpg.Data;
 
 namespace dotnet_rpg.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210202114043_UserCharacterRelation")]
+    partial class UserCharacterRelation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,12 +46,12 @@ namespace dotnet_rpg.Migrations
                     b.Property<int>("Strength")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int?>("USerId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("USerId");
 
                     b.ToTable("Characters");
                 });
@@ -77,11 +79,11 @@ namespace dotnet_rpg.Migrations
 
             modelBuilder.Entity("dotnet_rpg.Models.Character", b =>
                 {
-                    b.HasOne("dotnet_rpg.Models.User", "User")
+                    b.HasOne("dotnet_rpg.Models.User", "USer")
                         .WithMany("MyProperty")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("USerId");
 
-                    b.Navigation("User");
+                    b.Navigation("USer");
                 });
 
             modelBuilder.Entity("dotnet_rpg.Models.User", b =>
