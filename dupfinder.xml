@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DuplicatesReport ToolsVersion="203.0.20201229.113241">
+  <Statistics>
+    <CodebaseCost>10203</CodebaseCost>
+    <TotalDuplicatesCost>1440</TotalDuplicatesCost>
+    <TotalFragmentsCost>3074</TotalFragmentsCost>
+  </Statistics>
+  <Duplicates>
+    <Duplicate Cost="673">
+      <Fragment>
+        <FileName>Migrations\20210202134219_UserProprietyUpdate.Designer.cs</FileName>
+        <OffsetRange Start="573" End="3165"></OffsetRange>
+        <LineRange Start="17" End="94"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>Migrations\DataContextModelSnapshot.cs</FileName>
+        <OffsetRange Start="484" End="3076"></OffsetRange>
+        <LineRange Start="15" End="92"></LineRange>
+      </Fragment>
+    </Duplicate>
+    <Duplicate Cost="276">
+      <Fragment>
+        <FileName>Migrations\20210202084020_InitialCreate.Designer.cs</FileName>
+        <OffsetRange Start="793" End="1764"></OffsetRange>
+        <LineRange Start="23" End="51"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>Migrations\20210202113639_User.Designer.cs</FileName>
+        <OffsetRange Start="790" End="1761"></OffsetRange>
+        <LineRange Start="24" End="52"></LineRange>
+      </Fragment>
+    </Duplicate>
+    <Duplicate Cost="224">
+      <Fragment>
+        <FileName>Migrations\20210202114043_UserCharacterRelation.Designer.cs</FileName>
+        <OffsetRange Start="920" End="1687"></OffsetRange>
+        <LineRange Start="26" End="47"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>Migrations\20210202114221_UserCharacterRelationUpdate.Designer.cs</FileName>
+        <OffsetRange Start="932" End="1699"></OffsetRange>
+        <LineRange Start="26" End="47"></LineRange>
+      </Fragment>
+    </Duplicate>
+    <Duplicate Cost="194">
+      <Fragment>
+        <FileName>Migrations\20210202113639_User.Designer.cs</FileName>
+        <OffsetRange Start="1777" End="2473"></OffsetRange>
+        <LineRange Start="54" End="73"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>Migrations\20210202114043_UserCharacterRelation.Designer.cs</FileName>
+        <OffsetRange Start="1954" End="2650"></OffsetRange>
+        <LineRange Start="59" End="78"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>Migrations\20210202114221_UserCharacterRelationUpdate.Designer.cs</FileName>
+        <OffsetRange Start="1966" End="2662"></OffsetRange>
+        <LineRange Start="59" End="78"></LineRange>
+      </Fragment>
+    </Duplicate>
+    <Duplicate Cost="73">
+      <Fragment>
+        <FileName>Services\CharacterService.cs</FileName>
+        <OffsetRange Start="876" End="1036"></OffsetRange>
+        <LineRange Start="31" End="34"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>Services\CharacterService.cs</FileName>
+        <OffsetRange Start="3124" End="3282"></OffsetRange>
+        <LineRange Start="87" End="89"></LineRange>
+      </Fragment>
+    </Duplicate>
+  </Duplicates>
+</DuplicatesReport>
